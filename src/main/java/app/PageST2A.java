@@ -1,10 +1,16 @@
 package app;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -27,8 +33,12 @@ public class PageST2A implements Handler {
 
     @Override
     public void handle(Context context) throws Exception {
+
+
         // Create a simple HTML webpage in a String
        String html = "<html>";
+
+      
 
         // Add some Head information
         html = html + "<head>" + 
@@ -396,6 +406,10 @@ public class PageST2A implements Handler {
         // DO NOT MODIFY THIS
         // Makes Javalin render the webpage
         context.html(html);
+    }
+
+    private List<String> getRecordFromLine(String nextLine) {
+        return null;
     }
 
 }

@@ -32,10 +32,13 @@ public class PageIndex implements Handler {
 
         // Add some Header information
         html = html + "<head>" + 
-               "<title>Homepage</title>";
+               "<title>Climalie</title>";
 
+             
         // Add some CSS (external file)
         html = html + "<link rel='stylesheet' type='text/css' href='common.css' />";
+       
+        
         html = html + "</head>";
 
         // Add the body
@@ -58,11 +61,39 @@ public class PageIndex implements Handler {
         html = html + """
             <div class='header'>
                 <h1>
+                 <img src='https://cdn-icons-png.flaticon.com/512/5208/5208410.png' class='top-image' alt='logo' height='135'>;
+<h2 style='color:black;text-align:top-left; font-size: 1cm;position: relative;'>Climalie</h2>;
                     <img src='logo.png' class='top-image' alt='RMIT logo' height='75'>
                     Homepage
                 </h1>
             </div>
         """;
+
+      StringBuilder htmlBuilder = new StringBuilder();
+
+        // Retrieve the corresponding world population and temperature during these years
+        
+
+        // Display the information to the user
+        html = html +"""
+         <h2>Welcome to our Website!</h2>
+            <p>Here, you will find information about population and temperature data.</p>
+        <div class='content'>
+                <img src='https://images.unsplash.com/photo-1552799446-159ba9523315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80' alt='Ocean and Land Temperature' style='display: block; margin: 0 auto; border: 1px solid #ccc; width: 100%; max-width: 800px; height: auto;'>
+            </div><br><br>
+
+                <h3> Data Summary:
+                <p>Year Range for Available Data: 1750 - 2013
+                </p>
+                <p>World Population during this Period: 3745.0 - 4307.82 
+                </p>
+                <p>Temperature during this Period: 19.0 - 22.0 
+                </p>
+                <p>Total Number of Years of Available Data: 264 """;
+                
+
+        // Close Content div
+        
 
         // Add Div for page Content
         html = html + "<div class='content'>";
